@@ -1,0 +1,42 @@
+/*     공통     */
+body {
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #131417;
+  }
+  
+  a {
+    color: white;
+  }
+  
+  h3 {
+    font-size: 75px;
+    font-weight: 300;
+  }
+  
+  .rbox {
+    width: 150px;
+    height: 150px;
+    background-color: #eee;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  section {
+    margin-left: 240px;
+    min-height: 900px;
+  }
+  
+  #main {
+    position: relative;
+    max-width: 100%;
+  }
+  .asideclick {
+    text-shadow: #fff 1px 0 15px;
+  }
+
+  .portselect {
+    display: flex !important;
+  }

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://uzi-hoon99.github.io/personal/">
+    <meta property="og:description" content="우지훈의 웹디자인 포트폴리오">
+    <meta property="og:keywords" content="우지훈,웹퍼블리셔,웹디자인,포트폴리오,UZI">
+    <meta property="og:title" content="UZI : Web Publisher Portfolio">
+    <meta name="description" content="우지훈의 웹디자인 포트폴리오">
+    <meta name="keywords" content="우지훈,웹퍼블리셔,웹디자인,포트폴리오,UZI">
+    <title>UZI : Web Publisher Portfolio</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css"/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script type="text/javascript"></script>
+
+    <!-- 스킬 -->
+    <link rel="stylesheet" href="css/skill.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="js/skill.js"></script>
+
+    <!-- 포폴 애니메이션 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#portfolio .wrap .contents').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3
+            });
+        });
+    </script>
+
+    <!-- 페이지 슬라이드 -->
+    <link rel="stylesheet" href="css/timelinenav.css">
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src="js/smoothscroll.js"></script>
+
+</head>
+<body data-spy="scroll" data-target="#navbar-example">
+    <div id="main">
+        <aside id="head">
+            <div class="top">
+                <h1>
+                    <a href="#title">logo</a>
+                </h1>
+                <div class="menu" id="navbar-example">
+                    <ul class="nav">
+                        <li role="presentation">
+                            <a href="#title">MAIN</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#about">ABOUT</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#skill">SKILL</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#portfolio">PORTFOLIO</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foot">
+                <div class="sns">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="ionicon" viewBox="0 0 512 512"><path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"/></svg>
+                    </a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="ionicon" viewBox="0 0 512 512"><path d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"/><path d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"/></svg>
+                    </a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="ionicon" viewBox="0 0 512 512"><path d="M424 80H88a56.06 56.06 0 00-56 56v240a56.06 56.06 0 0056 56h336a56.06 56.06 0 0056-56V136a56.06 56.06 0 00-56-56zm-14.18 92.63l-144 112a16 16 0 01-19.64 0l-144-112a16 16 0 1119.64-25.26L256 251.73l134.18-104.36a16 16 0 0119.64 25.26z"/></svg>
+                    </a>
+                </div>
+                <p>
+                    본 페이지는 상업적 목적이 아닌
+                    <br>개인 포트폴리오용으로 제작되었습니다.
+                    <br>© 2023 Woo Ji Hoon. All Rights Reserved.</p>
+            </div>
+        </aside>
+        <section id="title">
+            <div class="wrap">
+                <h2>
+                    <span>W</span>
+                    <span>o</span>
+                    <span>o</span>
+                    <span>J</span>
+                    <span>i</span>
+                    <span>H</span>
+                    <span>o</span>
+                    <span>o</span>
+                    <span>n</span>
+                </h2>
+                <p>
+                    Web Publisher Portfolio
+                </p>
+            </div>
+        </section>
+        <section id="about">
+            <div class="wrap">
+                <img src="img/my1.jpg" alt="profille1">
+                <div class="aclass">
+                    <h3>
+                        ABOUT ME
+                    </h3>
+                    <p>
+                        안녕하세요, UI 개발자 우지훈입니다.
+                        <br>상상하던 것들이 코드로 실현되는 과정에 매력을 느껴
+                        <br>웹디자인 & 웹퍼블리셔 분야로 들어오게 되었습니다.
+                        <br>
+                        <br>어떠한 일이든 책임을 갖고 끈기 있게 마무리하며
+                        <br>시작한 일에 대해 최선을 다하는 사람입니다.
+                        <br>
+                        <br>다양한 직군과 함께 멋지고 즐거운 UI를 만드는 데 관심이 많습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="skill">
+            <div class="wrap">
+                <h3>
+                    SKILL & TOOLS
+                </h3>
+                <ul class="html">
+                    <li class="htmll">
+                        <div class="progress-pie-chart" data-percent="90">
+                            <div class="ppc-progress">
+                                <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                                <div class="pcc-percents-wrapper">
+                                    <span>
+                                        html
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="css">
+                        <div class="progress-pie-chart" data-percent="80">
+                            <div class="ppc-progress">
+                                <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                                <div class="pcc-percents-wrapper">
+                                    <span>
+                                        css
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="js">
+                        <div class="progress-pie-chart" data-percent="60">
+                            <div class="ppc-progress">
+                                <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                                <div class="pcc-percents-wrapper">
+                                    <span>
+                                        js
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="jq">
+                        <div class="progress-pie-chart" data-percent="60">
+                            <div class="ppc-progress">
+                                <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                                <div class="pcc-percents-wrapper">
+                                    <span>
+                                        jq
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="adobe">
+                    <li class="ps">
+                        <div class="progress-pie-chart" data-percent="60">
+                            <div class="ppc-progress">
+                                <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                                <div class="pcc-percents-wrapper">
+                                    <span>
+                                        ps
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ai">
+                        <div class="progress-pie-chart" data-percent="40">
+                            <div class="ppc-progress">
+                                <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                                <div class="pcc-percents-wrapper">
+                                    <span>
+                                        ai
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pr">
+                        <div class="progress-pie-chart" data-percent="50">
+                            <div class="ppc-progress">
+                                <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                                <div class="pcc-percents-wrapper">
+                                    <span>
+                                        pr
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ae">
+                        <div class="progress-pie-chart" data-percent="30">
+                            <div class="ppc-progress">
+                                <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                                <div class="pcc-percents-wrapper">
+                                    <span>
+                                        ae
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="portfolio">
+            <div class="wrap">
+                <h3>
+                    PORTFOLIO
+                </h3>
+                <ul class="contents">
+                    <li>
+                        <img src="img/popopo/samsung.png" alt="samsung">
+                        <div class="portinfo">
+                            <h4>SAMSUNG</h4>
+                            <p>삼성전자 클론 코딩</p>
+                            <a href="https://uzi-hoon99.github.io/pf1/" target="_blank">상세보기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/popopo/samsungre.png" alt="samsungre">
+                        <div class="portinfo">
+                            <h4>SAMSUNG : Re</h4>
+                            <p>삼성전자 리뉴얼 코딩</p>
+                            <a href="https://uzi-hoon99.github.io/pf2/" target="_blank">상세보기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/popopo/jquery.png" alt="jquery">
+                        <div class="portinfo">
+                            <h4>jQuery</h4>
+                            <p>jQuery 연습 코딩</p>
+                            <a href="https://uzi-hoon99.github.io/pf3/" target="_blank">상세보기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/popopo/kai.png" alt="kai">
+                        <div class="portinfo">
+                            <h4>KAI</h4>
+                            <p>KAI 클론 코딩</p>
+                            <a href="https://uzi-hoon99.github.io/pf4/" target="_blank">상세보기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/popopo/hite.png" alt="hite">
+                        <div class="portinfo">
+                            <h4>하이트 진로</h4>
+                            <p>하이트 진로 코딩</p>
+                            <a href="https://uzi-hoon99.github.io/pf5/" target="_blank">상세보기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/popopo/canon.png" alt="canon">
+                        <div class="portinfo">
+                            <h4>Canon</h4>
+                            <p>캐논 클론 코딩</p>
+                            <a href="https://uzi-hoon99.github.io/pf6/" target="_blank">상세보기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/popopo/cgv.png" alt="cgv">
+                        <div class="portinfo">
+                            <h4>CGV</h4>
+                            <p>CGV 클론 코딩</p>
+                            <a href="https://uzi-hoon99.github.io/pf7/" target="_blank">상세보기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/popopo/ezen.png" alt="ezen">
+                        <div class="portinfo">
+                            <h4>이젠 IT 컴퓨터 아카데미</h4>
+                            <p>이젠 아카데미 클론 코딩</p>
+                            <a href="https://uzi-hoon99.github.io/pf8/" target="_blank">상세보기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/popopo/paris.png" alt="paris">
+                        <div class="portinfo">
+                            <h4>파리바게트</h4>
+                            <p>파리바게트 클론 코딩</p>
+                            <a href="https://uzi-hoon99.github.io/pf9/" target="_blank">상세보기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/popopo/outback.png" alt="outback">
+                        <div class="portinfo">
+                            <h4>아웃백 : RE</h4>
+                            <p>아웃백 리뉴얼 코딩</p>
+                            <a href="https://uzi-hoon99.github.io/pf10/" target="_blank">상세보기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/popopo/musinsa.png" alt="musinsa">
+                        <div class="portinfo">
+                            <h4>무신사</h4>
+                            <p>무신사 PC 코딩</p>
+                            <a href="https://uzi-hoon99.github.io/pf11/" target="_blank">상세보기</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="wrap">
+                <img src="img/my2.jpg" alt="profille2">
+                <div class="cclass">
+                    <h3>
+                        CONTACT
+                    </h3>
+                    <p>
+                        끝까지 봐주셔서 감사합니다.
+                        <br>아직 부족하지만 점점 성장하는 모습을 보여드리겠습니다.
+                    </p>
+                    <ul>
+                        <li>sfoop@naver.com</li>
+                        <li>010-2436-5168</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,508 @@
+/*     사이드     */
+
+#main #head {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 240px;
+  height: 100%;
+  background-color: #1e1f26;
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+#main #head h1 {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  background-image: url(../img/logo2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0px;
+  background-position: center;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+#main #head h1 a{
+  width: 150px;
+  height: 150px;
+  display: block;
+}
+
+#main #head .menu {
+  width: 130px;
+  margin: 0 auto;
+}
+
+#main #head .menu ul li {
+  margin-bottom: 25px;
+}
+
+#main #head .menu ul a {
+  display: block;
+  padding: 10px 0px 10px 0px;
+  position: relative;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 200;
+  transition: all 0.5s;
+}
+
+#main #head .foot {
+  width: 240px;
+  text-align: center;
+  gap: 25px;
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+#main #head .foot p {
+  font-size: 10px;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+#main #head .foot .sns {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+#main #head .foot .sns a {
+  width: 30px;
+  height: 30px;
+}
+
+#main #head .foot .sns a:hover svg {
+  filter: drop-shadow(0 0 2.5px rgb(255, 255, 255));
+}
+
+/*     타이틀     */
+
+#main #title {
+  background-image: url(../img/moon-re.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#main #title .wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 930px;
+  font-size: 40px;
+  text-shadow: #000 1px 0 50px;
+  font-weight: 400;
+}
+#main #title .wrap h2 {
+  font-weight: 900;
+  font-size: 75px;
+  display: flex;
+  gap: 5px;
+  z-index: 2;
+}
+#main #title .wrap p {
+  z-index: 2;
+}
+#main #title .wrap h2 span {
+  animation-name: light;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+#main #title .wrap h2 span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+#main #title .wrap h2 span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+#main #title .wrap h2 span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+#main #title .wrap h2 span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+#main #title .wrap h2 span:nth-child(5) {
+  animation-delay: 0.5s;
+}
+#main #title .wrap h2 span:nth-child(6) {
+  animation-delay: 0.6s;
+}
+#main #title .wrap h2 span:nth-child(7) {
+  animation-delay: 0.7s;
+}
+#main #title .wrap h2 span:nth-child(8) {
+  animation-delay: 0.8s;
+}
+#main #title .wrap h2 span:nth-child(9) {
+  animation-delay: 0.9s;
+}
+@keyframes light {
+  0%{
+    text-shadow: #000 1px 0 50px;
+  }
+  25%{
+    text-shadow: #fff 1px 0 50px;
+  }
+  50%{
+    text-shadow: #000 1px 0 50px;
+  }
+  100%{
+    text-shadow: #000 1px 0 50px;
+  }
+}
+/*     어바웃     */
+
+#main #about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main #about .wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+#main #about img {
+  height: 500px;
+}
+
+#main #about .aclass {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#main #about .aclass h3 {
+}
+
+#main #about .aclass p {
+  font-size: 25px;
+  line-height: 2;
+}
+
+/*     스킬     */
+
+#main #skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main #skill .wrap {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#main #skill .wrap h3 {
+  margin-bottom: 75px;
+}
+
+#main #skill .wrap ul {
+  line-height: 30px;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 700;
+  transform: scale(0.8);
+}
+
+#main #skill .wrap ul li {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+#main #skill .wrap .html li .ppc-percents span{
+  width: 125px;
+  height: 125px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#main #skill .wrap .adobe li .ppc-percents span{
+  width: 115px;
+  height: 115px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 0px
+}
+
+#main #skill .wrap .html li:nth-child(1) .ppc-percents span {
+  background-image: url(../img/html.png);
+}
+
+#main #skill .wrap .html li:nth-child(2) .ppc-percents span{
+  background-image: url(../img/css.png);
+}
+
+#main #skill .wrap .html li:nth-child(3) .ppc-percents span {
+  background-image: url(../img/js.png);
+}
+
+#main #skill .wrap .html li:nth-child(4) .ppc-percents span {
+  background-image: url(../img/jq.png);
+}
+
+#main #skill .wrap .adobe li:nth-child(1) .ppc-percents span {
+  background-image: url(../img/ps.png);
+}
+
+#main #skill .wrap .adobe li:nth-child(2) .ppc-percents span {
+  background-image: url(../img/ai.png);
+}
+
+#main #skill .wrap .adobe li:nth-child(3) .ppc-percents span {
+  background-image: url(../img/pr.png);
+}
+
+#main #skill .wrap .adobe li:nth-child(4) .ppc-percents span {
+  background-image: url(../img/ae.png);
+}
+#main #skill .wrap .html li:nth-child(1) .ppc-progress .ppc-progress-fill {
+  background:#e02e00;
+}
+#main #skill .wrap .html li:nth-child(2) .ppc-progress .ppc-progress-fill {
+  background:#006eba;
+}
+#main #skill .wrap .html li:nth-child(3) .ppc-progress .ppc-progress-fill {
+  background:#e4bd00;
+}
+#main #skill .wrap .html li:nth-child(4) .ppc-progress .ppc-progress-fill {
+  background:#0765a9;
+}
+#main #skill .wrap .adobe li:nth-child(1) .ppc-progress .ppc-progress-fill {
+  background:#74b4f5;
+}
+#main #skill .wrap .adobe li:nth-child(2) .ppc-progress .ppc-progress-fill {
+  background:#fc9c0d;
+}
+#main #skill .wrap .adobe li:nth-child(3) .ppc-progress .ppc-progress-fill {
+  background:#d549fd;
+}
+#main #skill .wrap .adobe li:nth-child(4) .ppc-progress .ppc-progress-fill {
+  background:#bd77fd;
+}
+#main #skill .wrap .html li:nth-child(1) .progress-pie-chart.gt-50 {
+  background:#e02e00;
+}
+#main #skill .wrap .html li:nth-child(2) .progress-pie-chart.gt-50 {
+  background:#006eba;
+}
+#main #skill .wrap .html li:nth-child(3) .progress-pie-chart.gt-50 {
+  background:#e4bd00;
+}
+#main #skill .wrap .html li:nth-child(4) .progress-pie-chart.gt-50 {
+  background:#0765a9;
+}
+#main #skill .wrap .adobe li:nth-child(1) .progress-pie-chart.gt-50 {
+  background:#74b4f5;
+}
+#main #skill .wrap .adobe li:nth-child(2) .progress-pie-chart.gt-50 {
+  background:#fc9c0d;
+}
+#main #skill .wrap .adobe li:nth-child(3) .progress-pie-chart.gt-50 {
+  background:#d549fd;
+}
+#main #skill .wrap .adobe li:nth-child(4) .progress-pie-chart.gt-50 {
+  background:#bd77fd;
+}
+#main #skill .wrap .html li .gt-50 .ppc-progress .ppc-progress-fill {
+  background: #fff;
+}
+#main #skill .wrap .adobe li .gt-50 .ppc-progress .ppc-progress-fill {
+  background: #fff;
+}
+/*     포트폴리오     */
+
+#main #portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main #portfolio .wrap {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#main #portfolio .wrap > h3 {
+  
+  margin-bottom: 75px;
+}
+
+#main #portfolio .wrap ul.contents {
+  
+  width: 1200px;
+}
+#portfolio .wrap .contents button {
+  border: none;
+  background-color: transparent;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-size: 0;
+  width: 75px;
+  height: 75px;
+  top: calc(50% - 32.5px);
+}
+#portfolio .wrap .contents button.slick-prev {
+  background-image: url(../img/prev.svg);
+  transform: translateX(-50%);
+}
+#portfolio .wrap .contents button.slick-next {
+  background-image: url(../img/next.svg);
+  transform: translateX(50%);
+}
+#portfolio .wrap .contents button::before {
+  display: none;
+}
+
+#main #portfolio .wrap ul.contents li {
+  
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #1e1f26;
+  padding: 10px;
+  gap: 15px;
+}
+
+#main #portfolio .wrap ul.contents li img {
+  
+}
+
+#main #portfolio .wrap ul.contents li div.portinfo {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#main #portfolio .wrap ul.contents li div.portinfo h4 {
+  
+  font-size: 25px;
+  font-weight: 500;
+}
+
+#main #portfolio .wrap ul.contents li div.portinfo p {
+  
+  font-size: 20px;
+}
+
+#main #portfolio .wrap ul.contents li div.portinfo a {
+  
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+
+#main #portfolio .wrap ul.contents li div.portinfo a:hover {
+  color: black;
+  background-color: white;
+}
+
+
+/*     컨텍     */
+
+#main #contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main #contact .wrap {
+  display: flex;
+  gap: 45px;
+  justify-content: center;
+  align-items: center;
+}
+
+#main #contact .wrap img {
+  height: 500px;
+}
+
+#main #contact .wrap .cclass {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+  align-items: center;
+}
+
+#main #contact .wrap .cclass h3 {
+  /*! position: absolute; */
+  top: 0;
+  text-align: center;
+  width: 100%;
+}
+
+#main #contact .wrap .cclass p {
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+  line-height: 1.8;
+}
+
+#main #contact .wrap .cclass ul {
+  display: flex;
+  font-size: 25px;
+  gap: 50px;
+  justify-content: center;
+}
+
+#main #contact .wrap .cclass ul li:nth-child(1):before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-image: url(../img/mail.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: -15px;
+  margin-right: 10px;
+}
+
+#main #contact .wrap .cclass ul li:nth-child(2):before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-image: url(../img/call.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: -15px;
+  margin-right: 10px;
+}
+.slick-slide {
+  margin: 0 15px; // space(여백)/2
+}
+.slick-list {
+  margin: 0 -15px; // space(여백)/-2
+}
