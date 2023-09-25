@@ -215,18 +215,20 @@
 }
 
 #main #skill .wrap ul {
-  line-height: 30px;
   display: flex;
   gap: 100px;
   justify-content: center;
-  font-size: 25px;
-  font-weight: 700;
   transform: scale(0.8);
 }
 
 #main #skill .wrap ul li {
   margin-bottom: 50px;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 #main #skill .wrap .html li .ppc-percents span{
@@ -331,6 +333,11 @@
 #main #skill .wrap .adobe li .gt-50 .ppc-progress .ppc-progress-fill {
   background: #fff;
 }
+#main #skill .wrap ul li p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
 /*     포트폴리오     */
 
 #main #portfolio {
@@ -356,7 +363,7 @@
   
   width: 1200px;
 }
-#portfolio .wrap .contents button {
+#portfolio .wrap .contents > button {
   border: none;
   background-color: transparent;
   background-size: contain;
@@ -380,7 +387,7 @@
   display: none;
 }
 
-#main #portfolio .wrap ul.contents li {
+#main #portfolio .wrap ul.contents li.item {
   
   display: flex;
   flex-direction: column;
@@ -388,6 +395,7 @@
   background-color: #1e1f26;
   padding: 10px;
   gap: 15px;
+  border-radius: 15px;
 }
 
 #main #portfolio .wrap ul.contents li img {
@@ -424,7 +432,7 @@
 }
 
 #main #portfolio .wrap ul.contents li div.portinfo a:hover {
-  color: black;
+  color: #1e1f26;
   background-color: white;
 }
 
@@ -505,4 +513,21 @@
 }
 .slick-list {
   margin: 0 -15px; // space(여백)/-2
+}
+#portfolio .wrap .slick-dots {
+  bottom: -50px;
+}
+#portfolio .wrap .slick-dots li {
+  
+}
+#portfolio .wrap .slick-dots li button {
+  background-color: white;
+  border-radius: 100%;
+  opacity: 0.25;
+}
+#portfolio .wrap .slick-dots li.slick-active button {
+  opacity: 0.75;
+}
+#portfolio .wrap .slick-dots li button::before {
+  display: none;
 }
