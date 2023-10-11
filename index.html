@@ -45,6 +45,51 @@
     <link rel="stylesheet" href="css/timelinenav.css">
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
     <script src="js/smoothscroll.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var elm = ".box";
+            $(elm).each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(elm).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                     
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 800, complete: function () {
+                        }
+                    });
+                });
+            });
+        }
+    </script>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css"/>
 
 </head>
 <body data-spy="scroll" data-target="#navbar-example">
@@ -92,7 +137,7 @@
                     <br>© 2023 Woo Ji Hoon. All Rights Reserved.</p>
             </div>
         </aside>
-        <section id="title">
+        <section id="title" class="box">
             <div class="wrap">
                 <h2>
                     <span>W</span>
@@ -110,7 +155,7 @@
                 </p>
             </div>
         </section>
-        <section id="about">
+        <section id="about" class="box">
             <div class="wrap">
                 <img src="img/my1.jpg" alt="profille1">
                 <div class="aclass">
@@ -130,148 +175,157 @@
                 </div>
             </div>
         </section>
-        <section id="skill">
+        <section id="skill" class="box">
             <div class="wrap">
                 <h3>
-                    SKILL & TOOLS
+                    SKILL <span>&</span> TOOLS
                 </h3>
-                <ul class="html">
-                    <li class="htmll">
-                        <div class="progress-pie-chart" data-percent="90">
-                            <div class="ppc-progress">
-                                <div class="ppc-progress-fill"></div>
-                            </div>
-                            <div class="ppc-percents">
-                                <div class="pcc-percents-wrapper">
-                                    <span>
-                                        HTML5
-                                    </span>
+                <p class="info">제가 사용 가능한 기술 및 프로그램 입니다.</p>
+                <div class="list">
+                    <ul class="html">
+                        <li class="htmll">
+                            <div class="progress-pie-chart" data-percent="90">
+                                <div class="ppc-progress">
+                                    <div class="ppc-progress-fill"></div>
+                                </div>
+                                <div class="ppc-percents">
+                                    <div class="pcc-percents-wrapper">
+                                        <span>
+                                            HTML5
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <p>HTML5</p>
-                    </li>
-                    <li class="css">
-                        <div class="progress-pie-chart" data-percent="80">
-                            <div class="ppc-progress">
-                                <div class="ppc-progress-fill"></div>
-                            </div>
-                            <div class="ppc-percents">
-                                <div class="pcc-percents-wrapper">
-                                    <span>
-                                        CSS3
-                                    </span>
+                            <p>HTML5</p>
+                        </li>
+                        <li class="css">
+                            <div class="progress-pie-chart" data-percent="80">
+                                <div class="ppc-progress">
+                                    <div class="ppc-progress-fill"></div>
+                                </div>
+                                <div class="ppc-percents">
+                                    <div class="pcc-percents-wrapper">
+                                        <span>
+                                            CSS3
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <p>CSS3</p>
-                    </li>
-                    <li class="js">
-                        <div class="progress-pie-chart" data-percent="60">
-                            <div class="ppc-progress">
-                                <div class="ppc-progress-fill"></div>
-                            </div>
-                            <div class="ppc-percents">
-                                <div class="pcc-percents-wrapper">
-                                    <span>
-                                        Javascript
-                                    </span>
+                            <p>CSS3</p>
+                        </li>
+                        <li class="js">
+                            <div class="progress-pie-chart" data-percent="60">
+                                <div class="ppc-progress">
+                                    <div class="ppc-progress-fill"></div>
+                                </div>
+                                <div class="ppc-percents">
+                                    <div class="pcc-percents-wrapper">
+                                        <span>
+                                            Javascript
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <p>Javascript</p>
-                    </li>
-                    <li class="jq">
-                        <div class="progress-pie-chart" data-percent="60">
-                            <div class="ppc-progress">
-                                <div class="ppc-progress-fill"></div>
-                            </div>
-                            <div class="ppc-percents">
-                                <div class="pcc-percents-wrapper">
-                                    <span>
-                                        j Qurey
-                                    </span>
+                            <p>Javascript</p>
+                        </li>
+                        <li class="jq">
+                            <div class="progress-pie-chart" data-percent="60">
+                                <div class="ppc-progress">
+                                    <div class="ppc-progress-fill"></div>
+                                </div>
+                                <div class="ppc-percents">
+                                    <div class="pcc-percents-wrapper">
+                                        <span>
+                                            j Qurey
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <p>j Qurey</p>
-                    </li>
-                </ul>
-                <ul class="adobe">
-                    <li class="ps">
-                        <div class="progress-pie-chart" data-percent="60">
-                            <div class="ppc-progress">
-                                <div class="ppc-progress-fill"></div>
-                            </div>
-                            <div class="ppc-percents">
-                                <div class="pcc-percents-wrapper">
-                                    <span>
-                                        Photoshop
-                                    </span>
+                            <p>j Qurey</p>
+                        </li>
+                    </ul>
+                    <ul class="adobe">
+                        <li class="ps">
+                            <div class="progress-pie-chart" data-percent="60">
+                                <div class="ppc-progress">
+                                    <div class="ppc-progress-fill"></div>
+                                </div>
+                                <div class="ppc-percents">
+                                    <div class="pcc-percents-wrapper">
+                                        <span>
+                                            Photoshop
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <p>Photoshop</p>
-                    </li>
-                    <li class="ai">
-                        <div class="progress-pie-chart" data-percent="40">
-                            <div class="ppc-progress">
-                                <div class="ppc-progress-fill"></div>
-                            </div>
-                            <div class="ppc-percents">
-                                <div class="pcc-percents-wrapper">
-                                    <span>
-                                        Illustrator
-                                    </span>
+                            <p>Photoshop</p>
+                        </li>
+                        <li class="ai">
+                            <div class="progress-pie-chart" data-percent="40">
+                                <div class="ppc-progress">
+                                    <div class="ppc-progress-fill"></div>
+                                </div>
+                                <div class="ppc-percents">
+                                    <div class="pcc-percents-wrapper">
+                                        <span>
+                                            Illustrator
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <p>Illustrator</p>
-                    </li>
-                    <li class="pr">
-                        <div class="progress-pie-chart" data-percent="50">
-                            <div class="ppc-progress">
-                                <div class="ppc-progress-fill"></div>
-                            </div>
-                            <div class="ppc-percents">
-                                <div class="pcc-percents-wrapper">
-                                    <span>
-                                        Premiere Pro
-                                    </span>
+                            <p>Illustrator</p>
+                        </li>
+                        <li class="pr">
+                            <div class="progress-pie-chart" data-percent="50">
+                                <div class="ppc-progress">
+                                    <div class="ppc-progress-fill"></div>
+                                </div>
+                                <div class="ppc-percents">
+                                    <div class="pcc-percents-wrapper">
+                                        <span>
+                                            Premiere Pro
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <p>Premiere Pro</p>
-                    </li>
-                    <li class="ae">
-                        <div class="progress-pie-chart" data-percent="30">
-                            <div class="ppc-progress">
-                                <div class="ppc-progress-fill"></div>
-                            </div>
-                            <div class="ppc-percents">
-                                <div class="pcc-percents-wrapper">
-                                    <span>
-                                        After Effects
-                                    </span>
+                            <p>Premiere Pro</p>
+                        </li>
+                        <li class="ae">
+                            <div class="progress-pie-chart" data-percent="30">
+                                <div class="ppc-progress">
+                                    <div class="ppc-progress-fill"></div>
+                                </div>
+                                <div class="ppc-percents">
+                                    <div class="pcc-percents-wrapper">
+                                        <span>
+                                            After Effects
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <p>After Effects</p>
-                    </li>
-                </ul>
+                            <p>After Effects</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
-        <section id="portfolio">
+        <section id="portfolio" class="box">
             <div class="wrap">
                 <h3>
                     PORTFOLIO
                 </h3>
+                <p class="info">제가 디자인한 12가지의 작품들을 소개합니다.</p>
                 <ul class="contents">
                     <li class="item">
                         <img src="img/popopo/samsung.png" alt="samsung">
                         <div class="portinfo">
                             <h4>SAMSUNG</h4>
                             <p>삼성전자 클론 코딩</p>
+                            <div class="toolslist">
+                                <p class="tools">#HTML</p>
+                                <p class="tools">#CSS</p>
+                                <p class="tools">#PS</p>
+                            </div>
                             <a href="https://uzi-hoon99.github.io/pf1/" target="_blank">상세보기</a>
                         </div>
                     </li>
@@ -280,6 +334,11 @@
                         <div class="portinfo">
                             <h4>SAMSUNG : Re</h4>
                             <p>삼성전자 리뉴얼 코딩</p>
+                            <div class="toolslist">
+                                <p class="tools">#HTML</p>
+                                <p class="tools">#CSS</p>
+                                <p class="tools">#PS</p>
+                            </div>
                             <a href="https://uzi-hoon99.github.io/pf2/" target="_blank">상세보기</a>
                         </div>
                     </li>
@@ -288,6 +347,13 @@
                         <div class="portinfo">
                             <h4>jQuery</h4>
                             <p>jQuery 연습 코딩</p>
+                            <div class="toolslist">
+                                <p class="tools">#HTML</p>
+                                <p class="tools">#CSS</p>
+                                <p class="tools">#jquery</p>
+                                <p class="tools">#Javascript</p>
+                                <p class="tools">#PS</p>
+                            </div>
                             <a href="https://uzi-hoon99.github.io/pf3/" target="_blank">상세보기</a>
                         </div>
                     </li>
@@ -296,6 +362,13 @@
                         <div class="portinfo">
                             <h4>KAI</h4>
                             <p>KAI 클론 코딩</p>
+                            <div class="toolslist">
+                                <p class="tools">#HTML</p>
+                                <p class="tools">#CSS</p>
+                                <p class="tools">#jquery</p>
+                                <p class="tools">#Javascript</p>
+                                <p class="tools">#PS</p>
+                            </div>
                             <a href="https://uzi-hoon99.github.io/pf4/" target="_blank">상세보기</a>
                         </div>
                     </li>
@@ -304,6 +377,13 @@
                         <div class="portinfo">
                             <h4>하이트 진로</h4>
                             <p>하이트 진로 코딩</p>
+                            <div class="toolslist">
+                                <p class="tools">#HTML</p>
+                                <p class="tools">#CSS</p>
+                                <p class="tools">#jquery</p>
+                                <p class="tools">#Javascript</p>
+                                <p class="tools">#PS</p>
+                            </div>
                             <a href="https://uzi-hoon99.github.io/pf5/" target="_blank">상세보기</a>
                         </div>
                     </li>
@@ -312,6 +392,13 @@
                         <div class="portinfo">
                             <h4>Canon</h4>
                             <p>캐논 클론 코딩</p>
+                            <div class="toolslist">
+                                <p class="tools">#HTML</p>
+                                <p class="tools">#CSS</p>
+                                <p class="tools">#jquery</p>
+                                <p class="tools">#Javascript</p>
+                                <p class="tools">#PS</p>
+                            </div>
                             <a href="https://uzi-hoon99.github.io/pf6/" target="_blank">상세보기</a>
                         </div>
                     </li>
@@ -320,6 +407,13 @@
                         <div class="portinfo">
                             <h4>CGV</h4>
                             <p>CGV 클론 코딩</p>
+                            <div class="toolslist">
+                                <p class="tools">#HTML</p>
+                                <p class="tools">#CSS</p>
+                                <p class="tools">#jquery</p>
+                                <p class="tools">#Javascript</p>
+                                <p class="tools">#PS</p>
+                            </div>
                             <a href="https://uzi-hoon99.github.io/pf7/" target="_blank">상세보기</a>
                         </div>
                     </li>
@@ -328,6 +422,13 @@
                         <div class="portinfo">
                             <h4>이젠 IT 컴퓨터 아카데미</h4>
                             <p>이젠 아카데미 클론 코딩</p>
+                            <div class="toolslist">
+                                <p class="tools">#HTML</p>
+                                <p class="tools">#CSS</p>
+                                <p class="tools">#jquery</p>
+                                <p class="tools">#Javascript</p>
+                                <p class="tools">#PS</p>
+                            </div>
                             <a href="https://uzi-hoon99.github.io/pf8/" target="_blank">상세보기</a>
                         </div>
                     </li>
@@ -336,6 +437,13 @@
                         <div class="portinfo">
                             <h4>파리바게트</h4>
                             <p>파리바게트 클론 코딩</p>
+                            <div class="toolslist">
+                                <p class="tools">#HTML</p>
+                                <p class="tools">#CSS</p>
+                                <p class="tools">#jquery</p>
+                                <p class="tools">#Javascript</p>
+                                <p class="tools">#PS</p>
+                            </div>
                             <a href="https://uzi-hoon99.github.io/pf9/" target="_blank">상세보기</a>
                         </div>
                     </li>
@@ -344,6 +452,13 @@
                         <div class="portinfo">
                             <h4>아웃백 : RE</h4>
                             <p>아웃백 리뉴얼 코딩</p>
+                            <div class="toolslist">
+                                <p class="tools">#HTML</p>
+                                <p class="tools">#CSS</p>
+                                <p class="tools">#jquery</p>
+                                <p class="tools">#Javascript</p>
+                                <p class="tools">#PS</p>
+                            </div>
                             <a href="https://uzi-hoon99.github.io/pf10/" target="_blank">상세보기</a>
                         </div>
                     </li>
@@ -352,13 +467,20 @@
                         <div class="portinfo">
                             <h4>무신사</h4>
                             <p>무신사 PC 코딩</p>
+                            <div class="toolslist">
+                                <p class="tools">#HTML</p>
+                                <p class="tools">#CSS</p>
+                                <p class="tools">#jquery</p>
+                                <p class="tools">#Javascript</p>
+                                <p class="tools">#PS</p>
+                            </div>
                             <a href="https://uzi-hoon99.github.io/pf11/" target="_blank">상세보기</a>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
-        <section id="contact">
+        <section id="contact" class="box">
             <div class="wrap">
                 <img src="img/my2.jpg" alt="profille2">
                 <div class="cclass">

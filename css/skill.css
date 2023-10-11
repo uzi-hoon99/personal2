@@ -2,7 +2,7 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: #E5E5E5;
+    background-color: #bbb;
     position: relative;
   }
   .progress-pie-chart.gt-50 {
@@ -47,7 +47,7 @@
     top: calc(50% - 173.9130434783px/2);
     width: 173.9130434783px;
     height: 173.9130434783px;
-    background: #131417;
+    background: #1e1f26;
     text-align: center;
   }
   .ppc-percents span {

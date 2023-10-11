@@ -12,13 +12,14 @@
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 40px;
+  background-color: #131417;
 }
 
 #main #head h1 {
   width: 150px;
   height: 150px;
   margin: 0 auto;
-  background-image: url(../img/logo2.png);
+  background-image: url(../img/logo3.png);
   background-repeat: no-repeat;
   background-size: contain;
   font-size: 0px;
@@ -87,10 +88,11 @@
 /*     타이틀     */
 
 #main #title {
-  background-image: url(../img/moon-re.png);
+  /*! background-image: url(../img/moon-re.png); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-image: url(https://images.unsplash.com/photo-1445905595283-21f8ae8a33d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80);
 }
 #main #title .wrap {
   position: relative;
@@ -103,6 +105,10 @@
   font-size: 40px;
   text-shadow: #000 1px 0 50px;
   font-weight: 400;
+  background-image: url(../img/moon-re3.png);
+  background-position: center -5%;
+  background-repeat: no-repeat;
+  background-size: 30%;
 }
 #main #title .wrap h2 {
   font-weight: 900;
@@ -170,28 +176,32 @@
 
 #main #about .wrap {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 97px;
 }
 
 #main #about img {
   height: 500px;
+  border-radius: 20px 60px;
 }
 
 #main #about .aclass {
-  height: 500px;
+  height: 439px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: normal;
 }
 
 #main #about .aclass h3 {
+  margin-bottom: 35px;
 }
 
 #main #about .aclass p {
-  font-size: 25px;
-  line-height: 2;
+  font-size: 20px;
+  line-height: 1.6;
+  /*! font-weight: lighter; */
+  font-weight: 100;
 }
 
 /*     스킬     */
@@ -209,21 +219,32 @@
   align-items: center;
   flex-direction: column;
 }
-
-#main #skill .wrap h3 {
-  margin-bottom: 75px;
+#main #skill .wrap .list{
+ transform: scale(0.8); 
 }
-
+#main #skill .wrap h3 {
+  margin-bottom: 25px;
+}
+#main #skill .wrap h3 span{
+  color: #ccc;
+  font-weight:100;
+  font-size: 61px;
+}
+#main #skill .wrap p.info {
+  margin-bottom: 25px;
+  font-weight: 100;
+}
 #main #skill .wrap ul {
   display: flex;
   gap: 100px;
   justify-content: center;
-  transform: scale(0.8);
 }
-
+#main #skill .wrap ul:nth-of-type(1){
+  margin-bottom: 60px;
+}
 #main #skill .wrap ul li {
-  margin-bottom: 50px;
-  margin-top: 50px;
+  /*! margin-bottom: 50px; */
+  /*! margin-top: 50px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -328,14 +349,14 @@
   background:#bd77fd;
 }
 #main #skill .wrap .html li .gt-50 .ppc-progress .ppc-progress-fill {
-  background: #fff;
+  background: #bbb;
 }
 #main #skill .wrap .adobe li .gt-50 .ppc-progress .ppc-progress-fill {
-  background: #fff;
+  background: #bbb;
 }
 #main #skill .wrap ul li p {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 25px;
+  font-weight: 100;
 }
 
 /*     포트폴리오     */
@@ -356,9 +377,12 @@
 
 #main #portfolio .wrap > h3 {
   
-  margin-bottom: 75px;
+  margin-bottom: 25px;
 }
-
+#main #portfolio .wrap p.info {
+  margin-bottom: 50px;
+  font-weight: 100;
+}
 #main #portfolio .wrap ul.contents {
   
   width: 1200px;
@@ -392,14 +416,14 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  background-color: #1e1f26;
+  background-color: #131417;
   padding: 10px;
   gap: 15px;
   border-radius: 15px;
 }
 
 #main #portfolio .wrap ul.contents li img {
-  
+  border-radius: 15px;
 }
 
 #main #portfolio .wrap ul.contents li div.portinfo {
@@ -407,7 +431,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 #main #portfolio .wrap ul.contents li div.portinfo h4 {
@@ -418,17 +442,29 @@
 
 #main #portfolio .wrap ul.contents li div.portinfo p {
   
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 200;
 }
-
+#main #portfolio .wrap ul.contents li div.portinfo div.toolslist {
+  display: flex;
+  gap: 5px;
+}
+#main #portfolio .wrap ul.contents li div.portinfo div.toolslist p.tools {
+  font-size: 14px;
+  font-weight: 200;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 5px 10px;
+  color: rgb(10, 205, 206);
+}
 #main #portfolio .wrap ul.contents li div.portinfo a {
-  
-  border: 2px solid;
+  border: 1px solid;
   border-radius: 20px;
-  padding: 10px 15px;
-  font-size: 20px;
+  padding: 7px 15px;
+  font-size: 15px;
   font-weight: 500;
   transition: all 0.5s;
+  margin: 10px 0;
 }
 
 #main #portfolio .wrap ul.contents li div.portinfo a:hover {
@@ -454,6 +490,7 @@
 
 #main #contact .wrap img {
   height: 500px;
+  border-radius: 20px 60px;
 }
 
 #main #contact .wrap .cclass {
