@@ -1,3 +1,4 @@
 .nav li.active a {
   text-shadow: #fff 1px 0 15px;
+  font-weight: bold !important;
 }

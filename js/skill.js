@@ -31,6 +31,38 @@ $(function(){
     }
     $('.jq .ppc-progress-fill').css('transform','rotate('+ deg +'deg)');
 
+    var $ppc = $('.sass .progress-pie-chart'),
+        percent = parseInt($ppc.data('percent')),
+        deg = 360*percent/100;
+    if (percent > 50) {
+        $ppc.addClass('gt-50');
+    }
+    $('.sass .ppc-progress-fill').css('transform','rotate('+ deg +'deg)');
+
+    var $ppc = $('.w3c .progress-pie-chart'),
+        percent = parseInt($ppc.data('percent')),
+        deg = 360*percent/100;
+    if (percent > 50) {
+        $ppc.addClass('gt-50');
+    }
+    $('.w3c .ppc-progress-fill').css('transform','rotate('+ deg +'deg)');
+
+    var $ppc = $('.wa .progress-pie-chart'),
+        percent = parseInt($ppc.data('percent')),
+        deg = 360*percent/100;
+    if (percent > 50) {
+        $ppc.addClass('gt-50');
+    }
+    $('.wa .ppc-progress-fill').css('transform','rotate('+ deg +'deg)');
+
+    var $ppc = $('.vue .progress-pie-chart'),
+        percent = parseInt($ppc.data('percent')),
+        deg = 360*percent/100;
+    if (percent > 50) {
+        $ppc.addClass('gt-50');
+    }
+    $('.vue .ppc-progress-fill').css('transform','rotate('+ deg +'deg)');
+
     var $ppc = $('.ps .progress-pie-chart'),
         percent = parseInt($ppc.data('percent')),
         deg = 360*percent/100;

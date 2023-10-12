@@ -187,20 +187,25 @@
 }
 
 #main #about .aclass {
-  height: 439px;
   display: flex;
   flex-direction: column;
   justify-content: normal;
+  width: 515px;
 }
 
 #main #about .aclass h3 {
-  margin-bottom: 35px;
+  margin-bottom: 50px;
+}
+
+#main #about .aclass ul.aboutlist {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 50px;
 }
 
 #main #about .aclass p {
   font-size: 20px;
   line-height: 1.6;
-  /*! font-weight: lighter; */
   font-weight: 100;
 }
 
@@ -223,7 +228,7 @@
  transform: scale(0.8); 
 }
 #main #skill .wrap h3 {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 #main #skill .wrap h3 span{
   color: #ccc;
@@ -231,16 +236,20 @@
   font-size: 61px;
 }
 #main #skill .wrap p.info {
-  margin-bottom: 25px;
+  margin-bottom: -25px;
   font-weight: 100;
 }
 #main #skill .wrap ul {
   display: flex;
-  gap: 100px;
+  gap: 140px;
   justify-content: center;
+  margin-bottom: 25px;
 }
-#main #skill .wrap ul:nth-of-type(1){
-  margin-bottom: 60px;
+#main #skill .wrap ul.tool {
+  transform: scale(0.9);
+}
+#main #skill .wrap ul.adobe {
+  transform: scale(0.8); 
 }
 #main #skill .wrap ul li {
   /*! margin-bottom: 50px; */
@@ -259,10 +268,17 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+#main #skill .wrap .tool li .ppc-percents span{
+  width: 125px;
+  height: 125px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 #main #skill .wrap .adobe li .ppc-percents span{
-  width: 115px;
-  height: 115px;
+  width: 125px;
+  height: 125px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -285,6 +301,22 @@
   background-image: url(../img/jq.png);
 }
 
+#main #skill .wrap .tool li:nth-child(1) .ppc-percents span {
+  background-image: url(../img/sass.png);
+}
+
+#main #skill .wrap .tool li:nth-child(2) .ppc-percents span{
+  background-image: url(../img/w3c.png);
+}
+
+#main #skill .wrap .tool li:nth-child(3) .ppc-percents span {
+  background-image: url(../img/wa.png);
+}
+
+#main #skill .wrap .tool li:nth-child(4) .ppc-percents span {
+  background-image: url(../img/vue.png);
+}
+
 #main #skill .wrap .adobe li:nth-child(1) .ppc-percents span {
   background-image: url(../img/ps.png);
 }
@@ -300,55 +332,86 @@
 #main #skill .wrap .adobe li:nth-child(4) .ppc-percents span {
   background-image: url(../img/ae.png);
 }
-#main #skill .wrap .html li:nth-child(1) .ppc-progress .ppc-progress-fill {
+
+#main #skill .wrap .html li:nth-child(1) .progress-pie-chart.gt-50 {
   background:#e02e00;
 }
-#main #skill .wrap .html li:nth-child(2) .ppc-progress .ppc-progress-fill {
-  background:#006eba;
-}
-#main #skill .wrap .html li:nth-child(3) .ppc-progress .ppc-progress-fill {
-  background:#e4bd00;
-}
-#main #skill .wrap .html li:nth-child(4) .ppc-progress .ppc-progress-fill {
-  background:#0765a9;
-}
-#main #skill .wrap .adobe li:nth-child(1) .ppc-progress .ppc-progress-fill {
-  background:#74b4f5;
-}
-#main #skill .wrap .adobe li:nth-child(2) .ppc-progress .ppc-progress-fill {
-  background:#fc9c0d;
-}
-#main #skill .wrap .adobe li:nth-child(3) .ppc-progress .ppc-progress-fill {
-  background:#d549fd;
-}
-#main #skill .wrap .adobe li:nth-child(4) .ppc-progress .ppc-progress-fill {
-  background:#bd77fd;
-}
-#main #skill .wrap .html li:nth-child(1) .progress-pie-chart.gt-50 {
+#main #skill .wrap .html li:nth-child(1) .ppc-progress .ppc-progress-fill {
   background:#e02e00;
 }
 #main #skill .wrap .html li:nth-child(2) .progress-pie-chart.gt-50 {
   background:#006eba;
 }
+#main #skill .wrap .html li:nth-child(2) .ppc-progress .ppc-progress-fill {
+  background:#006eba;
+}
 #main #skill .wrap .html li:nth-child(3) .progress-pie-chart.gt-50 {
+  background:#e4bd00;
+}
+#main #skill .wrap .html li:nth-child(3) .ppc-progress .ppc-progress-fill {
   background:#e4bd00;
 }
 #main #skill .wrap .html li:nth-child(4) .progress-pie-chart.gt-50 {
   background:#0765a9;
 }
+#main #skill .wrap .html li:nth-child(4) .ppc-progress .ppc-progress-fill {
+  background:#0765a9;
+}
+
+#main #skill .wrap .tool li:nth-child(1) .progress-pie-chart.gt-50 {
+  background:#ca6196;
+}
+#main #skill .wrap .tool li:nth-child(1) .ppc-progress .ppc-progress-fill {
+  background:#ca6196;
+}
+#main #skill .wrap .tool li:nth-child(2) .progress-pie-chart.gt-50 {
+  background:#015797;
+}
+#main #skill .wrap .tool li:nth-child(2) .ppc-progress .ppc-progress-fill {
+  background:#015797;
+}
+#main #skill .wrap .tool li:nth-child(3) .progress-pie-chart.gt-50 {
+  background:#29af1d;
+}
+#main #skill .wrap .tool li:nth-child(3) .ppc-progress .ppc-progress-fill {
+  background:#29af1d;
+}
+#main #skill .wrap .tool li:nth-child(4) .progress-pie-chart.gt-50 {
+  background:#00bb7c;
+}
+#main #skill .wrap .tool li:nth-child(4) .ppc-progress .ppc-progress-fill {
+  background:#00bb7c;
+}
+
 #main #skill .wrap .adobe li:nth-child(1) .progress-pie-chart.gt-50 {
+  background:#74b4f5;
+}
+#main #skill .wrap .adobe li:nth-child(1) .ppc-progress .ppc-progress-fill {
   background:#74b4f5;
 }
 #main #skill .wrap .adobe li:nth-child(2) .progress-pie-chart.gt-50 {
   background:#fc9c0d;
 }
+#main #skill .wrap .adobe li:nth-child(2) .ppc-progress .ppc-progress-fill {
+  background:#fc9c0d;
+}
 #main #skill .wrap .adobe li:nth-child(3) .progress-pie-chart.gt-50 {
+  background:#d549fd;
+}
+#main #skill .wrap .adobe li:nth-child(3) .ppc-progress .ppc-progress-fill {
   background:#d549fd;
 }
 #main #skill .wrap .adobe li:nth-child(4) .progress-pie-chart.gt-50 {
   background:#bd77fd;
 }
+#main #skill .wrap .adobe li:nth-child(4) .ppc-progress .ppc-progress-fill {
+  background:#bd77fd;
+}
+
 #main #skill .wrap .html li .gt-50 .ppc-progress .ppc-progress-fill {
+  background: #bbb;
+}
+#main #skill .wrap .tool li .gt-50 .ppc-progress .ppc-progress-fill {
   background: #bbb;
 }
 #main #skill .wrap .adobe li .gt-50 .ppc-progress .ppc-progress-fill {
@@ -437,32 +500,35 @@
 #main #portfolio .wrap ul.contents li div.portinfo h4 {
   
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 #main #portfolio .wrap ul.contents li div.portinfo p {
   
   font-size: 16px;
   font-weight: 200;
+  color: #fff;
+  font-weight: 300;
+  /*! font-family: 'Noto Sans KR', sans-serif; */
 }
 #main #portfolio .wrap ul.contents li div.portinfo div.toolslist {
   display: flex;
-  gap: 5px;
+  gap: 12px;
 }
 #main #portfolio .wrap ul.contents li div.portinfo div.toolslist p.tools {
   font-size: 14px;
   font-weight: 200;
-  border: 1px solid;
+  /*! border: 1px solid; */
   border-radius: 15px;
-  padding: 5px 10px;
+  /*! padding: 5px 10px; */
   color: rgb(10, 205, 206);
 }
 #main #portfolio .wrap ul.contents li div.portinfo a {
-  border: 1px solid;
+  border: 1px solid #ccc;
   border-radius: 20px;
   padding: 7px 15px;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 300;
   transition: all 0.5s;
   margin: 10px 0;
 }
@@ -483,7 +549,7 @@
 
 #main #contact .wrap {
   display: flex;
-  gap: 45px;
+  gap: 108px;
   justify-content: center;
   align-items: center;
 }
@@ -511,17 +577,24 @@
 #main #contact .wrap .cclass p {
   text-align: center;
   width: 100%;
-  font-size: 25px;
-  line-height: 1.8;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #ccc;
+  width: 251px;
 }
-
 #main #contact .wrap .cclass ul {
   display: flex;
-  font-size: 25px;
+  font-size: 30px;
   gap: 50px;
   justify-content: center;
+  flex-direction: column;
 }
-
+#main #contact .wrap .cclass ul li:nth-child(1){
+  order: 2;
+}
+#main #contact .wrap .cclass ul li:nth-child(2){
+  order: 1;
+}
 #main #contact .wrap .cclass ul li:nth-child(1):before {
   content: "";
   width: 50px;

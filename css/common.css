@@ -15,6 +15,14 @@ body {
     font-size: 75px;
     font-weight: 300;
   }
+
+  .hide {
+    display: none;
+  }
+  .about-on {
+    text-shadow: #fff 1px 0 15px;
+    font-weight: bold;
+  }
   
   .rbox {
     width: 150px;
