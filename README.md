@@ -34,7 +34,7 @@ https://uzi-hoon99.github.io/personal2/
 13. 앱코	https://uzi-hoon99.github.io/pf13/
 	
 
-## 스크린샷 또는 데모
+## 스크린샷
 ![personal](https://github.com/uzi-hoon99/personal2/assets/142555239/e1142317-d259-4f18-ae54-c1effcae0841)
 
 
