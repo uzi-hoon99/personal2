@@ -35,10 +35,8 @@ https://uzi-hoon99.github.io/personal2/
 	
 
 ## 스크린샷 또는 데모
-(포트폴리오 웹사이트의 스크린샷을 추가)
+![personal](https://github.com/uzi-hoon99/personal2/assets/142555239/e1142317-d259-4f18-ae54-c1effcae0841)
+
 
 ## 작성자 정보
 메일 : woojihun5168@gmail.com
-
-## 향후 계획
-(추가적인 기능 개발, 디자인 개선, 사용자 피드백 수렴 등)
